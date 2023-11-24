@@ -1,0 +1,41 @@
+background-image: url("/Assets/img/Aba.jpg");
+.login {
+    position: fixed;
+    bottom: 120px;
+    left: 0;
+    transform: translate(0, 0);
+    background-color: #f2f2f2;
+    padding: 2rem;
+    color: #f8fafc;
+    border-radius: 8px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+  }
+  
+  
+  
+  
+  .login h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%; /* Alterei para 100% para ocupar a largura total do contêiner pai */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } 
