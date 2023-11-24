@@ -1,7 +1,23 @@
-background-image: url("/Assets/img/Aba.jpg");
+@font-face {
+    font-family: "Roboto";
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+.login h1 {
+    color: red;
+  }
+  
+  .form-group label {
+    color: black;
+  }
+  
 .login {
+   
     position: fixed;
-    bottom: 120px;
+    bottom: 93px;
     left: 0;
     transform: translate(0, 0);
     background-color: #f2f2f2;
@@ -39,3 +55,25 @@ background-image: url("/Assets/img/Aba.jpg");
     border-radius: 4px;
     cursor: pointer;
   } 
+  .login .lembrar-senha {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .login .lembrar-senha i {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  .login .equipe-pedagogica {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .login .equipe-pedagogica a {
+    color:red;
+    text-decoration: none;
+    font-weight: bold;
+  }
+    

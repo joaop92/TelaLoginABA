@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Components/Header.css";
-import aba from "../Assets/img/Aba.jpg";
+import { faLockOpen } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 class Header extends Component {
   state = {
@@ -13,6 +14,7 @@ class Header extends Component {
   handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
+    const faEnvelope = require("@fortawesome/free-solid-svg-icons").faEnvelope;
 
     this.setState({
       [name]: value,
@@ -61,12 +63,19 @@ class Header extends Component {
     return (
       <div className="login">
         <h1>Bem Vindo (a)!</h1>
+        <div className="acessar-pelo-email">
+          <a href="#" className="acessar-pelo-email-link">
+            <FontAwesomeIcon icon={faEnvelope} />
+            Acessar pelo e-mail
+          </a>
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="email">E-mail</label>
+            <label htmlFor="email">E-mail (Obrigatório):</label>
             <input
               type="email"
               name="email"
+              required
               className="form-control"
               value={this.state.email}
               onChange={this.handleChange}
@@ -76,10 +85,11 @@ class Header extends Component {
             )}
           </div>
           <div className="form-group">
-            <label htmlFor="password">Senha</label>
+            <label htmlFor="password">Senha (Obrigatório):</label>
             <input
               type="password"
               name="password"
+              required
               className="form-control"
               value={this.state.password}
               onChange={this.handleChange}
@@ -91,6 +101,16 @@ class Header extends Component {
           <button type="submit" className="btn btn-primary">
             Acessar
           </button>
+          <div className="lembrar-senha">
+            <FontAwesomeIcon icon={faLockOpen} />
+            <span></span>
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Lembrar senha
+          </button>
+          <div className="equipe-pedagogica">
+            <a href="#">Equipe pedagógica</a>
+          </div>
         </form>
       </div>
     );
